@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: gxanshu/astro-decap-cms-starter #replace with your githu repo
+  repo: bupd/avirex-blog #replace with your githu repo
   branch: main
   squash_merges: true
   open_authoring: true
@@ -8,7 +8,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: public/images
 public_folder: /images
-site_url: "https://astro-decapcms-starter.netlify.app/" # your site name
+site_url: "https://avirex-blog.netlify.app" # your site name
 
 collections:
   - name: post
@@ -21,6 +21,11 @@ collections:
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: publishedAt, label: Date, widget: date }
-      - {label: "Publish", name: "isPublish", widget: "boolean", default: true}
-      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - {
+          label: "Publish",
+          name: "isPublish",
+          widget: "boolean",
+          default: true,
+        }
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: body, label: Body, widget: markdown }
