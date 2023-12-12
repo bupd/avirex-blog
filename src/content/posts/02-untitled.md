@@ -5,6 +5,7 @@ description: "Lorem ipsum dolor sit amet consectetur et ultrices blandit neque e
 slug: "untitled"
 image:
   url: "/images/wp11896114-katana-4k-wallpapers.jpg"
+thumbnail: /images/netflix_-_april_19_-_107__2_.jpg
 isPublish: true
 isDraft: true
 ---

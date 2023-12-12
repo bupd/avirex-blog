@@ -9,6 +9,7 @@ const postsCollection = defineCollection({
     image: z.object({
       url: z.string(),
     }),
+    thumbnail: z.string(),
     isPublish: z.boolean(),
     isDraft: z.boolean().default(false),
   }),

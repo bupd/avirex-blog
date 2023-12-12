@@ -9,7 +9,6 @@ isPublish: true
 isDraft: true
 ---
 
-
 ![image](/images/wp11896114-katana-4k-wallpapers.jpg "kumar")
 
 p﻿oiiii\
