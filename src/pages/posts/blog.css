@@ -1,0 +1,89 @@
+:root {
+  --font-family-primary: 'Vollkorn', serif;
+  --font-family-secondary: 'PT Sans', sans-serif;
+  
+  --font-size-title: 1.2rem;
+  --line-height-title: 1.1;
+  --font-size-caption: 14px;
+  --line-height-caption: 1.2;
+  
+  --color-text: #ffffff;
+  --color-highlight-primary: #FFEF7E;
+  --color-highlight-secondary: #B7F9E9;
+  --color-highlight-primary: #cdc271;
+  --color-highlight-secondary: #B7F9E9;
+  --border-radius-primary: 32px; 
+}
+.cusCard {
+  max-width: 800px;
+  border-radius: var(--border-radius-primary);
+  box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0px !important;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  .cusCard {
+    flex-direction: row;
+    align-items: center;
+    margin: 40px;
+    padding: 32px;
+  }
+}
+
+.card__image {
+  width: 100%;
+  max-height: 200px !important;
+  border-radius: var(--border-radius-primary);
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 18px;
+}
+@media (min-width: 600px) {
+  .card__image {
+    width: 45%;
+    max-height: none;
+    min-height: 400px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .card__content {
+    width: 55%;
+    padding-left: 40px;
+    --font-size-title:2rem;
+  }
+}
+
+.card__date {
+  display: block;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+@media (min-width: 600px) {
+  .card__date {
+    margin-bottom: 8px;
+  }
+}
+
+.card__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
+  color: #ffffff;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  /* background-image: linear-gradient(90deg, var(--color-highlight-primary), var(--color-highlight-secondary)); */
+  background-size: 100% 42%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  padding: 0 4px;
+  margin-left: -4px;
+}
