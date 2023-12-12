@@ -29,3 +29,11 @@ collections:
         }
       - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
       - { name: body, label: Body, widget: markdown }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
