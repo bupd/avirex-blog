@@ -21,14 +21,6 @@ collections:
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: publishedAt, label: Date, widget: date }
-      - {
-          label: "Publish",
-          name: "isPublish",
-          widget: "boolean",
-          default: true,
-        }
-      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
-      - { name: body, label: Body, widget: markdown }
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
@@ -37,3 +29,11 @@ collections:
         media_library:
           config:
             multiple: true
+      - {
+          label: "Publish",
+          name: "isPublish",
+          widget: "boolean",
+          default: true,
+        }
+      - { label: "Draft", name: "isDraft", widget: "boolean", default: false }
+      - { name: body, label: Body, widget: markdown }
