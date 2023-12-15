@@ -4,7 +4,7 @@ description: ppopo
 publishedAt: 2023-12-09T14:51:52.192Z
 image:
   url: "/images/wp11896114-katana-4k-wallpapers.jpg"
-thumbnail: /images/netflix_-_april_19_-_107__2_.jpg
+thumbnail: /images/wp11896114-katana-4k-wallpapers.jpg
 isPublish: true
 isDraft: true
 ---
