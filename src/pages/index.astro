@@ -1,4 +1,6 @@
 ---
+import { getCollection } from "astro:content";
+const posts = await getCollection("posts");
 ---
 
 <html class="no-js" lang="zxx">
@@ -13,7 +15,7 @@
       content="DrSK's Website for enrolling into the Fitness Program.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="/assets/img/logo/loder.png" />
-    <!-- <link rel="manifest" href="site.webmanifest" /> -->
+    <link rel="manifest" href="site.webmanifest" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -21,7 +23,7 @@
     />
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://avirex-fit.netlify.app" />
+    <meta property="og:url" content="https://avirex-blog.netlify.app" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="DrSKSP" />
     <meta
@@ -36,8 +38,8 @@
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="avirex-fit.netlify.app" />
-    <meta property="twitter:url" content="https://avirex-fit.netlify.app" />
+    <meta property="twitter:domain" content="avirex-blog.netlify.app" />
+    <meta property="twitter:url" content="https://avirex-blog.netlify.app" />
     <meta name="twitter:title" content="DrSKSP" />
     <meta
       name="twitter:description"
@@ -51,8 +53,8 @@
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg" />
+    <!-- <link rel="manifest" href="site.webmanifest" /> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg" /> -->
 
     <!-- CSS here -->
     <!-- <link -->
@@ -234,7 +236,7 @@
                 data-wow-duration="1s"
                 data-wow-delay=".1s"
               >
-                <h2>What I Offer</h2>
+                <h2>What We Offer</h2>
               </div>
             </div>
           </div>
@@ -361,8 +363,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="row flex justify-content-center">
+            <div class="col-lg-5 col-md-12 col-sm-12">
               <div
                 class="properties mb-30 wow fadeInUp"
                 data-wow-duration="1s"
@@ -420,7 +422,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-5 col-md-12 col-sm-12">
               <div
                 class="properties mb-30 wow fadeInUp"
                 data-wow-duration="1s"
@@ -483,7 +485,7 @@
       </section>
       <!-- Courses area End -->
       <!--? About Area-2 Start -->
-      <section class="about-area2 fix pb-padding pt-50 pb-80" id="about">
+      <section class="about-area2 fix pb-padding pt-50 pb-30" id="about">
         <div class="support-wrapper align-items-center">
           <div class="right-content2">
             <!-- img -->
@@ -503,7 +505,7 @@
               data-wow-delay=".3s"
             >
               <div class="front-text">
-                <h2 class="aboutKumar">About Me</h2>
+                <h2 class="aboutKumar">About Us</h2>
                 <p>
                   Our founder & CEO, Dr. Sivakumar Kannan (DrSK), India's
                   premier Sports Pharmacist with research expertise in multiple
@@ -599,31 +601,6 @@
               </figure>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="slide">
-              <figure class="snip1192">
-                <img src="/assets/img/icon/doubleq.png" class="dq" alt="dq"/>
-<blockquote> Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. 
-<p>-- Adhi</p>
-</blockquote>
-
-              </figure>
-              <figure class="snip1192">
-                <img src="/assets/img/icon/doubleq.png" class="dq" alt="dq"/>
-<blockquote> Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. 
-<p>-- Adhi</p>
-</blockquote>
-
-              </figure>
-              <figure class="snip1192">
-                <img src="/assets/img/icon/doubleq.png" class="dq" alt="dq"/>
-<blockquote> Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. 
-<p>-- Adhi</p>
-</blockquote>
-
-              </figure>
-            </div>
-          </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -642,16 +619,23 @@
           <div class="row justify-content-center">
             <div class="col-lg-7 col-md-9 col-sm-10">
               <div
-                class="section-tittle text-center mb-100 wow fadeInUp"
+                class="section-tittle text-center mb-10 wow fadeInUp"
                 data-wow-duration="2s"
                 data-wow-delay=".2s"
               >
-                <h2>From Blog</h2>
+                <h2 style="font-size:50px;" >From Blog</h2>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
+            {posts.slice(0,2).map((post)=>{
+              const formatDate = post.data.publishedAt.toLocaleDateString('en-US',{
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })
+              return (
+              <div class="col-xl-6 col-lg-6 col-md-6">
               <div
                 class="home-blog-single mb-30 wow fadeInUp"
                 data-wow-duration="1s"
@@ -659,40 +643,26 @@
               >
                 <div class="blog-img-cap">
                   <div class="blog-img">
-                    <img src="/assets/img/gallery/blog1.png" alt="" />
+                    {post.data.thumbnail?
+                      <img src={post.data.thumbnail} alt={post.data.title} />
+                      :<img src="/images/img_not_found.jpg" alt="Alter Image" />}
                   </div>
                   <div class="blog-cap">
-                    <span>Gym & Fitness</span>
+                    <span>{formatDate}</span>
                     <h3>
-                      <a href="/blog"
-                        >Your Antibiotic One Day To 10 Day Options</a
-                      >
+                      <a href={`/posts/${post.slug}`}
+                        >{post.data.title}</a>
                     </h3>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-              <div
-                class="home-blog-single mb-30 wow fadeInUp"
-                data-wow-duration="2s"
-                data-wow-delay=".6s"
-              >
-                <div class="blog-img-cap">
-                  <div class="blog-img">
-                    <img src="/assets/img/gallery/blog2.png" alt="" />
-                  </div>
-                  <div class="blog-cap">
-                    <span>Gym & Fitness</span>
-                    <h3>
-                      <a href="blog_details"
-                        >Your Antibiotic One Day To 10 Day Options</a
-                      >
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
+              )
+
+            })}
+          </div>
+          <div class="row justify-content-center">
+            <a href="/posts/" class="border-btn">Learn More</a>
           </div>
         </div>
       </section>
@@ -825,8 +795,8 @@
 
     <!-- JS here -->
 
-    <script src="/js/typed.js" is:inline></script>
-    <script>
+    <script src="/assets/js/typed.js" is:inline></script>
+    <script is:inline>
       var typed = new Typed(".typed-words", {
         strings: ["sweat", "smile", "repeat"],
         typeSpeed: 80,

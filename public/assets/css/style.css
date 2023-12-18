@@ -1,10 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
 p {
   color: #b3b6ba !important;
 }
 
 .nav-title {
   color: white;
-  font: 2rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 /* Theme Description
@@ -2488,14 +2491,14 @@ hr {
   position: absolute;
   top: 50%;
   z-index: 200;
-  left: 0;
+  left: 50%;
   right: 0;
   margin: 0 auto;
   text-align: center;
   display: inline-block;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   padding-top: 6px;
   -webkit-transition: 0.6s;
   -o-transition: 0.6s;
@@ -3421,7 +3424,7 @@ hr {
   margin-top: -1px;
   background-image: url(../img/hero/hero_img);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position:center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -3860,12 +3863,14 @@ hr {
   height: 80px;
   background: red;
   border-radius: 50px;
-  display: inline-block;
+  display: flex;
   position: relative;
   margin-bottom: 31px;
   line-height: 80px;
   text-align: center;
   box-shadow: 0px 15px 25px rgba(66, 85, 164, 0.08);
+  justify-content: center;
+  padding: 15px;
 }
 
 /* line 16, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_pricing.scss */
@@ -4921,6 +4926,7 @@ body {
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
+  height: 300px !important;
 }
 
 /* line 10, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_blog_page.scss */
@@ -4931,6 +4937,13 @@ body {
   -ms-transform: scale 1;
   transform: scale 1;
   transition: all 0.5s ease-out 0s;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: center;
+  height: 100%;
+
 }
 
 /* line 17, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_blog_page.scss */
